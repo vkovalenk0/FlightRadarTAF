@@ -5,7 +5,7 @@ import com.codeborne.selenide.Selenide;
 public class NavigationAction {
 
     public NavigationAction openHomePage() {
-        Selenide.open("https://www.flightradar24.com/");
+        Selenide.open("");
         return this;
     }
 }
