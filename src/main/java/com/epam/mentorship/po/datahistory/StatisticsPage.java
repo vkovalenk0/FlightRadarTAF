@@ -1,4 +1,6 @@
 package com.epam.mentorship.po.datahistory;
 
-public class StatisticsPage {
+import com.epam.mentorship.po.BasePage;
+
+public class StatisticsPage extends BasePage {
 }

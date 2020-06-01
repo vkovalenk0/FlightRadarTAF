@@ -1,4 +1,6 @@
 package com.epam.mentorship.po.commercialservices;
 
-public class DataServicesPage {
+import com.epam.mentorship.po.BasePage;
+
+public class DataServicesPage extends BasePage {
 }

@@ -1,4 +1,6 @@
 package com.epam.mentorship.po.datahistory;
 
-public class PinnedFlightsPage {
+import com.epam.mentorship.po.BasePage;
+
+public class PinnedFlightsPage extends BasePage {
 }

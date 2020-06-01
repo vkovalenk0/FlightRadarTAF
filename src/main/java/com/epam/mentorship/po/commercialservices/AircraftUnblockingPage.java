@@ -1,4 +1,6 @@
 package com.epam.mentorship.po.commercialservices;
 
-public class AircraftUnblockingPage {
+import com.epam.mentorship.po.BasePage;
+
+public class AircraftUnblockingPage extends BasePage {
 }

@@ -1,4 +1,6 @@
 package com.epam.mentorship.po.social;
 
-public class AvTalkPodcastPage {
+import com.epam.mentorship.po.BasePage;
+
+public class AvTalkPodcastPage extends BasePage {
 }

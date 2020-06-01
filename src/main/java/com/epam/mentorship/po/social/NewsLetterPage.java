@@ -1,4 +1,6 @@
 package com.epam.mentorship.po.social;
 
-public class NewsLetterPage {
+import com.epam.mentorship.po.BasePage;
+
+public class NewsLetterPage extends BasePage {
 }

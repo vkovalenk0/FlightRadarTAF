@@ -1,41 +1,30 @@
 package com.epam.mentorship.po.apps;
 
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
 import com.epam.mentorship.po.BasePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
+import static com.codeborne.selenide.Selenide.$$x;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class AppsPage extends BasePage {
 
-    @FindBy(xpath = "//a[contains(@href, 'apple-store')]")
-    private WebElement appStoreImage;
+    private SelenideElement appStoreImage = $x("//a[contains(@href, 'apple-store')]");
 
-    @FindBy(xpath = "//div[@class='app-buttons']//a[contains(@href, 'flightradar24free&')]")
-    private WebElement googlePlayImage;
+    private SelenideElement googlePlayImage = $x("//div[@class='app-buttons']//a[contains(@href, 'flightradar24free&')]");
 
-    @FindBy(xpath = "//div[@id='ios']//img[contains(@src,'screenshots')]")
-    private List<WebElement> iosAppImages;
+    private ElementsCollection iosAppImages = $$x("//div[@id='ios']//img[contains(@src,'screenshots')]");
 
-    @FindBy(xpath = "//div[@id='android']//img[contains(@src,'screenshots')]")
-    private List<WebElement> androidAppImages;
+    private ElementsCollection androidAppImages = $$x("//div[@id='android']//img[contains(@src,'screenshots')]");
 
-    @FindBy(xpath = "//a[contains(@data-content,'ios')]")
-    private WebElement iosTab;
+    private SelenideElement iosTab = $x("//a[contains(@data-content,'ios')]");
 
-    @FindBy(xpath = "//a[contains(@data-content,'android')]")
-    private WebElement androidTab;
+    private SelenideElement androidTab = $x("//a[contains(@data-content,'android')]");
 
-    @FindBy(xpath = "//div[@class='content-row description']/p")
-    private WebElement appDescriptionText;
+    private SelenideElement appDescriptionText = $x("//div[@class='content-row description']/p");
 
-    @FindBy(xpath = "//div[@class='content']/h1")
-    private WebElement appDescriptionLabel;
-
-    public AppsPage(WebDriver driver) {
-        super(driver);
-    }
+    private SelenideElement appDescriptionLabel = $x("//div[@class='content']/h1");
 
     public void clickOnIosTab() {
         iosTab.click();
@@ -46,18 +35,18 @@ public class AppsPage extends BasePage {
     }
 
     public boolean isAppDescriptionTextDisplayed() {
-        return appDescriptionText.isDisplayed();
+        return appDescriptionText.is(Condition.visible);
     }
 
     public boolean isAppDescriptionLabelDisplayed() {
-        return appDescriptionLabel.isDisplayed();
+        return appDescriptionLabel.is(Condition.visible);
     }
 
     public boolean isAppStoreImageDisplayed() {
-        return appStoreImage.isDisplayed();
+        return appStoreImage.is(Condition.visible);
     }
 
     public boolean isGooglePlayImageDisplayed() {
-        return googlePlayImage.isDisplayed();
+        return googlePlayImage.is(Condition.visible);
     }
 }

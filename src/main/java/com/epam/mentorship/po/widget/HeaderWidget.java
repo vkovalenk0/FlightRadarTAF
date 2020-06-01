@@ -1,75 +1,51 @@
 package com.epam.mentorship.po.widget;
 
+import com.codeborne.selenide.SelenideElement;
 import com.epam.mentorship.po.BasePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+
+import static com.codeborne.selenide.Selenide.$x;
 
 public class HeaderWidget extends BasePage {
 
-    @FindBy(xpath = "//*[contains(@class,'logo-fr24-flat')]")
-    private WebElement headerLogo;
+    private final SelenideElement headerLogo = $x("//*[contains(@class,'logo-fr24-flat')]");
 
-    @FindBy(xpath = "//*[@id='navTopApps']")
-    private WebElement appsButton;
+    private final SelenideElement appsButton = $x("//*[@id='navTopApps']");
 
-    @FindBy(xpath = "//*[@id='navTopAddCoverage']")
-    private WebElement addCoverageButton;
+    private final SelenideElement addCoverageButton = $x("//*[@id='navTopAddCoverage']");
 
-    @FindBy(xpath = "//*[@id='navTopDataHistory']")
-    private WebElement dataHistoryButton;
+    private final SelenideElement dataHistoryButton = $x("//*[@id='navTopDataHistory']");
 
-    @FindBy(xpath = "//*[@id='navTopSocial']")
-    private WebElement socialButton;
+    private final SelenideElement socialButton = $x("//*[@id='navTopSocial']");
 
-    @FindBy(xpath = "//*[@id='navTopPress']")
-    private WebElement pressButton;
+    private final SelenideElement pressButton = $x("//*[@id='navTopPress']");
 
-    @FindBy(xpath = "//*[@id='navTopAbout']")
-    private WebElement aboutButton;
+    private final SelenideElement aboutButton = $x("//*[@id='navTopAbout']");
 
-    @FindBy(xpath = "//*[@id='navTopBusiness']")
-    private WebElement commercialServicesButton;
+    private final SelenideElement commercialServicesButton = $x("//*[@id='navTopBusiness']");
 
-    @FindBy(xpath = "//*[@id='navTopAddCoverageApplyForReceiver']")
-    private WebElement applyForReceiverLink;
+    private final SelenideElement applyForReceiverLink = $x("//*[@id='navTopAddCoverageApplyForReceiver']");
 
-    @FindBy(xpath = "//*[@id='navTopAddCoverageAddCoverage']")
-    private WebElement addCoverageLink;
+    private final SelenideElement addCoverageLink = $x("//*[@id='navTopAddCoverageAddCoverage']");
 
-    @FindBy(xpath = "//*[@id='navTopAddCoverageShareYourData']")
-    private WebElement shareDataLink;
+    private final SelenideElement shareDataLink = $x("//*[@id='navTopAddCoverageShareYourData']");
 
-    @FindBy(xpath = "//*[@id='navTopAddCoverageBuildYourOwn']")
-    private WebElement buildOwnLink;
+    private final SelenideElement buildOwnLink = $x("//*[@id='navTopAddCoverageBuildYourOwn']");
 
-    @FindBy(xpath = "//*[@id='navTopAddCoverageShareStatistics']")
-    private WebElement shareStatisticsLink;
+    private final SelenideElement shareStatisticsLink = $x("//*[@id='navTopAddCoverageShareStatistics']");
 
-    @FindBy(xpath = "//*[@id='navTopDataHistoryDataHistory']")
-    private WebElement searchLink;
+    private final SelenideElement searchLink = $x("//*[@id='navTopDataHistoryDataHistory']");
 
-    @FindBy(xpath = "//*[@id='navTopDataHistoryAirports']")
-    private WebElement airportsLink;
+    private final SelenideElement airportsLink = $x("//*[@id='navTopDataHistoryAirports']");
 
-    @FindBy(xpath = "//*[@id='navTopDataHistoryAirlines']")
-    private WebElement airlinesLink;
+    private final SelenideElement airlinesLink = $x("//*[@id='navTopDataHistoryAirlines']");
 
-    @FindBy(xpath = "//*[@id='navTopDataHistoryAirline']")
-    private WebElement aircraftLink;
+    private final SelenideElement aircraftLink = $x("//*[@id='navTopDataHistoryAirline']");
 
-    @FindBy(xpath = "//*[@id='navTopDataHistoryFlights']")
-    private WebElement flightsLink;
+    private final SelenideElement flightsLink = $x("//*[@id='navTopDataHistoryFlights']");
 
-    @FindBy(xpath = "navTopDataHistoryPinned")
-    private WebElement pinnedFlightLinks;
+    private final SelenideElement pinnedFlightLinks = $x("navTopDataHistoryPinned");
 
-    @FindBy(xpath = "//*[@id='navTopDataHistoryStatistics']")
-    private WebElement statisticsLinks;
-
-    public HeaderWidget(WebDriver driver) {
-        super(driver);
-    }
+    private final SelenideElement statisticsLinks = $x("//*[@id='navTopDataHistoryStatistics']");
 
     public void clickOnCommercialServiceButton() {
         commercialServicesButton.click();

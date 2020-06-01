@@ -1,4 +1,6 @@
 package com.epam.mentorship.po.social;
 
-public class BlogPage {
+import com.epam.mentorship.po.BasePage;
+
+public class BlogPage extends BasePage {
 }

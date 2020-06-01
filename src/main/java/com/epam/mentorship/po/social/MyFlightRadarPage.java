@@ -1,4 +1,6 @@
 package com.epam.mentorship.po.social;
 
-public class MyFlightRadarPage {
+import com.epam.mentorship.po.BasePage;
+
+public class MyFlightRadarPage extends BasePage {
 }

@@ -1,4 +1,6 @@
 package com.epam.mentorship.po.datahistory;
 
-public class AirlinesPage {
+import com.epam.mentorship.po.BasePage;
+
+public class AirlinesPage extends BasePage {
 }

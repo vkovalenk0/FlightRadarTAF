@@ -1,4 +1,6 @@
 package com.epam.mentorship.po.commercialservices;
 
-public class AppIntegrationPage {
+import com.epam.mentorship.po.BasePage;
+
+public class AppIntegrationPage extends BasePage {
 }
