@@ -1,6 +1,8 @@
 package com.epam.mentorship.utils.guice;
 
 import com.google.inject.AbstractModule;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -11,6 +13,7 @@ import static com.google.inject.name.Names.bindProperties;
 
 public class PropertiesModule extends AbstractModule {
 
+    private static final Logger LOG = LoggerFactory.getLogger(PropertiesModule.class);
     private static final String CONFIG_PROPERTIES = "src/test/resources/config.properties";
 
     @Override
@@ -19,9 +22,8 @@ public class PropertiesModule extends AbstractModule {
         try {
             properties.load(new BufferedInputStream(new FileInputStream(CONFIG_PROPERTIES)));
         } catch (IOException e) {
-            // TODO LOG here
-            e.printStackTrace();
-            return;
+            LOG.error("Error occurred while processing properties in file {}", CONFIG_PROPERTIES, e);
+            throw new IllegalStateException("Unable to load properties");
         }
         bindProperties(binder(), properties);
     }
