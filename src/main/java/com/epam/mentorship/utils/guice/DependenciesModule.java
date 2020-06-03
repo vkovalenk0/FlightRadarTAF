@@ -17,7 +17,7 @@ public class DependenciesModule extends AbstractModule {
     @Override
     protected void configure() {
         getClassesForPackages("com.epam.mentorship.action", "com.epam.mentorship.assertion",
-                "com.epam.mentorship.model", "com.epam.mentorship.page")
+                "com.epam.mentorship.page")
                 .forEach(el -> bind(el.load()));
     }
 
