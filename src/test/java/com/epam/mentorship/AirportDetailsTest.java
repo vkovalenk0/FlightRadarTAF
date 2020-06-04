@@ -17,11 +17,11 @@ public class AirportDetailsTest extends BaseTest {
     private AirportDetailsAssertion airportDetailsAssertion;
 
     @Test(description = "Verify ability for guest user to see airport details")
-    public void verifyAbilityForGuestToLoadSite() {
+    public void verifyAbilityForGuestToSeeAirportDetails() {
         // Given
         AirportDetailsDto airportDto = AirportDetailsDto.builder()
                 .name("Lviv Danylo Halytskyi International Airport")
-                .code("LWO/UKLL")
+                .code("LWO/UK LL")
                 .build();
 
         navigationAction.openHomePage();

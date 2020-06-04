@@ -1,9 +1,13 @@
 package com.epam.mentorship;
 
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import com.epam.mentorship.utils.guice.DependenciesModule;
 import com.epam.mentorship.utils.guice.PropertiesModule;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Guice;
 
@@ -28,5 +32,15 @@ public class BaseTest {
                     SELENIDE_PROPERTIES, e);
         }
         System.setProperties(properties);
+    }
+
+    @BeforeSuite
+    public void setLog() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
+    }
+
+    @AfterMethod(alwaysRun = true)
+    public void shutDownBrowser() {
+        Selenide.closeWebDriver();
     }
 }

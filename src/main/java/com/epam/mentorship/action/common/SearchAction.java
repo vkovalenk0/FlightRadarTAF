@@ -13,7 +13,7 @@ public class SearchAction {
     private HomePage homePage;
 
     public SearchAction searchByText(String text) {
-        LOG.info("Searching by {} query", text);
+        LOG.info("Searching by '{}' query", text);
         homePage.enterSearchText(text);
         homePage.clickOnFirstSearchSuggestion();
         return this;

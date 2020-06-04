@@ -1,5 +1,17 @@
+buildscript {
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath group: 'io.qameta.allure', name: 'allure-gradle', version: '2.8.1'
+    }
+}
+
 plugins {
     id 'java'
+    id 'io.qameta.allure' version "2.8.1"
 }
 
 group 'com.epam.mentorship'
@@ -16,4 +28,17 @@ dependencies {
     compile 'com.codeborne:selenide:5.12.2'
     compile group: 'com.google.inject', name: 'guice', version: '4.2.3'
     compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compile group: 'io.qameta.allure', name: 'allure-selenide', version: '2.13.3'
+    compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.13.3'
+}
+
+allure {
+    version = '2.8.1'
+    autoconfigure = true
+}
+
+test {
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+    }
 }

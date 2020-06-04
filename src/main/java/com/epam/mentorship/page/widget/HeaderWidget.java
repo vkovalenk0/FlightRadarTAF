@@ -1,5 +1,6 @@
 package com.epam.mentorship.page.widget;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -131,6 +132,10 @@ public class HeaderWidget {
 
     public boolean isHeaderLogoVisible() {
         return headerLogo.isDisplayed();
+    }
+
+    public void waitForHeaderLogoToBeVisible() {
+        headerLogo.shouldBe(Condition.visible);
     }
 
     public void clickOnLogInButton() {

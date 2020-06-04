@@ -27,6 +27,6 @@ public class HomePage extends BasePage {
     }
 
     public void clickOnFirstSearchSuggestion() {
-        searchSuggestions.first().click();
+        searchSuggestions.first().shouldBe(Condition.visible).click();
     }
 }
