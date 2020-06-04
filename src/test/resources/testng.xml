@@ -7,7 +7,7 @@
 
     <test name="Tests">
         <packages>
-            <package name="com.epam.mentorship"/>
+            <package name="com.mentorship"/>
         </packages>
     </test>
 </suite>
