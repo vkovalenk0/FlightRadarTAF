@@ -1,6 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="All Tests" verbose="1">
 
+    <listeners>
+        <listener class-name="com.epam.mentorship.utils.testng.AddScreenshotOnFailListener"/>
+    </listeners>
+
     <test name="Tests">
         <packages>
             <package name="com.epam.mentorship"/>
