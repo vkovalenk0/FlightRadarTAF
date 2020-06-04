@@ -2,7 +2,7 @@
 <suite name="All Tests" verbose="1">
 
     <listeners>
-        <listener class-name="com.epam.mentorship.utils.testng.AddScreenshotOnFailListener"/>
+        <listener class-name="com.mentorship.utils.testng.AddScreenshotOnFailListener"/>
     </listeners>
 
     <test name="Tests">

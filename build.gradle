@@ -1,7 +1,7 @@
 buildscript {
 
     repositories {
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -14,10 +14,10 @@ plugins {
     id 'io.qameta.allure' version "2.8.1"
 }
 
-group 'com.epam.mentorship'
-version '1.0-SNAPSHOT'
+group 'com.mentorship'
+version '1.0'
 
-sourceCompatibility = 1.11
+sourceCompatibility = 1.13
 
 repositories {
     mavenCentral()
