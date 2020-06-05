@@ -35,6 +35,7 @@ dependencies {
 allure {
     version = '2.8.1'
     autoconfigure = true
+    aspectjVersion = '1.9.5'
 }
 
 test {
