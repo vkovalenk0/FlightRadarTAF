@@ -4,3 +4,4 @@ build
 out
 .allure
 allure-results
+users.json

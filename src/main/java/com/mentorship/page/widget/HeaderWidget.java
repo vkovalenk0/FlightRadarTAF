@@ -50,6 +50,12 @@ public class HeaderWidget {
 
     private final SelenideElement logInButton = $(".premium-menu-title-login");
 
+    private final SelenideElement logInEmailInput = $("#fr24_SignInEmail");
+
+    private final SelenideElement logInPasswordInput = $("#fr24_SignInPassword");
+
+    private final SelenideElement logInConfirmButton = $("#fr24_SignIn");
+
     public void clickOnCommercialServiceButton() {
         commercialServicesButton.click();
     }
@@ -146,4 +152,15 @@ public class HeaderWidget {
         return headerLogo.isDisplayed();
     }
 
+    public void typeEmail(String email) {
+        logInEmailInput.shouldBe(Condition.visible).setValue(email);
+    }
+
+    public void typePassword(String password) {
+        logInPasswordInput.shouldBe(Condition.visible).setValue(password);
+    }
+
+    public void clickLogInConfirmButton() {
+        logInConfirmButton.click();
+    }
 }
