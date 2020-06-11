@@ -8,8 +8,6 @@ import org.slf4j.LoggerFactory;
 
 public class SearchAction {
 
-    private static final Logger LOG = LoggerFactory.getLogger(SearchAction.class);
-
     @Inject
     private HomePage homePage;
 

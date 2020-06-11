@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import static org.testng.Assert.*;
 
 public class AirportDetailsAssertion {
-    private static final Logger LOG = LoggerFactory.getLogger(AirportDetailsAssertion.class);
     @Inject
     private AirportDetailsWidget airportDetailsWidget;
 

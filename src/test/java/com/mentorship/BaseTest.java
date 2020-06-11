@@ -26,6 +26,7 @@ public class BaseTest {
     public void setUpDriverConfig() {
         Properties properties = System.getProperties();
         try {
+            // TODO putIfAbsent
             properties.load(new BufferedInputStream(new FileInputStream(SELENIDE_PROPERTIES)));
         } catch (IOException e) {
             LOG.warn("Driver config property file {} is not loaded, default Selenide config will be used",

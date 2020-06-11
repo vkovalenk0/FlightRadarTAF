@@ -10,7 +10,6 @@ import static org.testng.Assert.assertTrue;
 
 public class HomePageAssertion {
 
-    private static final Logger LOG = LoggerFactory.getLogger(HomePageAssertion.class);
     @Inject
     private HomePage homePage;
 

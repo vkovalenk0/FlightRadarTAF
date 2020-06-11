@@ -9,8 +9,6 @@ import org.slf4j.LoggerFactory;
 
 public class NavigationAction {
 
-    private static final Logger LOG = LoggerFactory.getLogger(NavigationAction.class);
-
     @Inject
     private CookiesWidget cookiesWidget;
 
