@@ -21,7 +21,7 @@ public class AirportDetailsTest extends BaseTest {
         // Given
         AirportDetailsDto airportDto = AirportDetailsDto.builder()
                 .name("Lviv Danylo Halytskyi International Airport")
-                .code("LWO/UK LL")
+                .code("LWO/UKLL")
                 .build();
 
         navigationAction.openHomePage();
